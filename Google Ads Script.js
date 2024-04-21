@@ -17,8 +17,11 @@
 
         var account = accountIterator.next();
 
+            //Use the label "budget: " to specify your budget, For example "budget: 1000"
          var budgetAmount = account.labels().withCondition("Name CONTAINS 'budget'").get().next().getName().slice(8);
+            // Use the label "email: " to specify client's email address for example "email: me@brianparsa.com"
          var emailAddressDes = account.labels().withCondition("Name CONTAINS 'email'").get().next().getName().slice(7)
+            // Use the label "starting date: " to specify the starting time for your budget, for example "starting date: 20240421" for 21/04/2024
          var startingDate = account.labels().withCondition("Name CONTAINS 'starting date'").get().next().getName().slice(15);
 
 
